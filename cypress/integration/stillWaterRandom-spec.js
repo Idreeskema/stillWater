@@ -3,6 +3,11 @@
 
 
 describe("Test Still Water", () => {
+    afterEach(function() {
+        if (this.currentTest.state === 'failed') {
+          Cypress.runner.stop()
+        }
+      });
 
     beforeEach(function () {
         cy.fixture('example').then((testdata) => {
@@ -40,7 +45,7 @@ describe("Test Still Water", () => {
         cy.get('.mat-flat-button').click({ multiple: true });
     });
     it("thirdPage", function () {
-        cy.wait(3000)
+        cy.wait(6000)
         cy.get('#avatar-lily').should('be.visible');
         cy.get('#mat-input-8').should('be.visible').type(this.data.email);
         cy.get('#mat-input-9').type(this.data.phoneNo);
@@ -94,6 +99,7 @@ describe("Test Still Water", () => {
         cy.get('#mat-input-13').type(this.data.creditCard.ccexpire);
         cy.get('.mat-flat-button').click();
        // cy.get('#mat-error-0').should('not.be.visible');
+       
     });
 
 

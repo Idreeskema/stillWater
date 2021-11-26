@@ -1,4 +1,18 @@
 {
-    "baseUrl":"https://ucreditu-preprod.insuranceaisle.com"
+    "baseUrl":"https://creditoneinsurance.insuranceaisle.com",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 10000,
+    
+
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "cypress/reports",
+      "reportFilename": "report",
+      "overwrite": true,
+      "html": true,
+      "json": false,
+      "charts": false
+    },
+    "video": false
    
 }
