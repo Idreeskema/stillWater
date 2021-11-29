@@ -12,7 +12,7 @@ describe("Test Still Water", () => {
     beforeEach(function () {
         cy.fixture('example').then((testdata) => {
             this.data = testdata
-
+            cy.viewport(1024, 768)
 
         })
     })
@@ -42,7 +42,7 @@ describe("Test Still Water", () => {
         cy.wait(3000);
         cy.get('.pac-item').click();
         cy.get('#mat-input-7').type(this.data.apt)
-        cy.contains('Next').click();
+        cy.get('.mat-flat-button').dblclick();
     });
     it("thirdPage", function () {
      
