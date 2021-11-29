@@ -45,11 +45,11 @@ describe("Test Still Water", () => {
         cy.get('.mat-flat-button').click({ multiple: true });
     });
     it("thirdPage", function () {
-        cy.wait(6000)
+        cy.wait(10000)
         cy.get('#avatar-lily').should('be.visible');
         cy.get('#mat-input-8').should('be.visible').type(this.data.email);
         cy.get('#mat-input-9').type(this.data.phoneNo);
-        cy.get('.mat-flat-button').click();
+        cy.get('.mat-flat-button').dblclick();
     });
     it("fourthPage", function () {
         cy.get('#avatar-lily').should('be.visible');
@@ -82,25 +82,21 @@ describe("Test Still Water", () => {
 
     });
     it("PaymentMode", function () {
-        cy.get('#avatar-lily').should('be.visible');
-        cy.get('#lbl_monthly_cc').click();
+        
+        cy.get('#lbl_paid_in_full').click();
         cy.get('.mat-flat-button').click();
+        cy.get('#mat-input-14').type('111111111');
+        cy.get('#mat-input-15').type('111111111111');
+        cy.get('.mat-form-field-suffix > .mat-focus-indicator > .mat-button-wrapper > .mat-icon').click();
+        cy.get('#mat-input-16').type('111111111111');
+        cy.get('.mat-select-placeholder').click();
+        cy.get('#mat-option-10 > .mat-option-text').click();
+        cy.get('app-eft-bank-info.ng-star-inserted > :nth-child(3)').should('be.visible')
+        cy.get('app-eft-bank-info.ng-star-inserted > .pad-bottom').should('be.visible')
+        cy.get('.mat-flat-button').should('be.visible').click()
 
     });
-    it("makePurchase", function () {
-        cy.get('#avatar-lily').should('be.visible');
-        cy.get('.mat-flat-button').click();
-
-    });
-    it("Credit Card", function () {
-        cy.get('#avatar-lily').should('be.visible');
-        cy.get('#mat-input-11').type(this.data.creditCard.ccName);
-        cy.get('#mat-input-12').type(this.data.creditCard.ccNumber);
-        cy.get('#mat-input-13').type(this.data.creditCard.ccexpire);
-        cy.get('.mat-flat-button').click();
-       // cy.get('#mat-error-0').should('not.be.visible');
-       
-    });
+   
 
 
  
