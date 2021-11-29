@@ -42,7 +42,7 @@ describe("Test Still Water", () => {
         cy.wait(3000);
         cy.get('.pac-item').click();
         cy.get('#mat-input-7').type(this.data.apt)
-        cy.get('.mat-flat-button').dblclick({ multiple: true });
+        cy.get('.mat-button-wrapper').dblclick();
     });
     it("thirdPage", function () {
      

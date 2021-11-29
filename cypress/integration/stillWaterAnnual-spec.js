@@ -49,7 +49,7 @@ describe("Test Still Water", () => {
         //cy.get('#avatar-lily').should('be.visible');
         cy.get('#mat-input-8').type(this.data.email);
         cy.get('#mat-input-9').type(this.data.phoneNo);
-        cy.get('.mat-flat-button').dblclick();
+        cy.get('.mat-button-wrapper').dblclick();
     });
     it("fourthPage", function () {
         cy.get('#avatar-lily').should('be.visible');
