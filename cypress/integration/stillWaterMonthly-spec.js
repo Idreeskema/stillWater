@@ -12,7 +12,7 @@ describe("Test Still Water", () => {
     beforeEach(function () {
         cy.fixture('example').then((testdata) => {
             this.data = testdata
-            cy.viewport(1024, 768)
+            cy.viewport(1000, 660)
 
         })
     })
