@@ -42,10 +42,10 @@ describe("Test Still Water", () => {
         cy.wait(3000);
         cy.get('.pac-item').click();
         cy.get('#mat-input-7').type(this.data.apt)
-        cy.get('.mat-flat-button').click({ multiple: true });
+        cy.get('.mat-flat-button').dblclick({ multiple: true });
     });
     it("thirdPage", function () {
-        cy.wait(10000)
+     
         //cy.get('#avatar-lily').should('be.visible');
         cy.get('#mat-input-8').should('be.visible').type(this.data.email);
         cy.get('#mat-input-9').type(this.data.phoneNo);
