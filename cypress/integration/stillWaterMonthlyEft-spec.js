@@ -41,12 +41,17 @@ describe("Test Still Water", () => {
         cy.get('#mat-input-3').type(this.data.address.address1);
         cy.wait(3000);
         cy.get('.pac-item').click();
-        cy.get('#mat-input-7').type(this.data.apt)
-        cy.get('.mat-flat-button').dblclick();
+        cy.get('#mat-input-7').type(this.data.apt);
+       // cy.get('div.input-div > button').dblclick({ multiple: true });
+       for(let n = 0; n < 2; n ++){
+        cy.get('.mat-flat-button')
+          .click()
+      }
+
     });
     it("thirdPage", function () {
      
-        //cy.get('#avatar-lily').should('be.visible');
+        cy.get('#avatar-lily').should('be.visible');
         cy.get('#mat-input-8').type(this.data.email);
         cy.get('#mat-input-9').type(this.data.phoneNo);
         cy.get('.mat-flat-button').dblclick();

@@ -12,7 +12,7 @@ describe("Test Still Water", () => {
     beforeEach(function () {
         cy.fixture('example').then((testdata) => {
             this.data = testdata
-            cy.viewport(1000, 660)
+            cy.viewport(1000, 660)//1263,599
 
         })
     })
@@ -22,9 +22,6 @@ describe("Test Still Water", () => {
        
 
     })
-    
-        
-    
     it("Assert on First Page", function () {
 
         cy.get('#avatar-lily').should('be.visible');
@@ -41,8 +38,12 @@ describe("Test Still Water", () => {
         cy.get('#mat-input-3').type(this.data.address.address1);
         cy.wait(3000);
         cy.get('.pac-item').click();
-        cy.get('#mat-input-7').type(this.data.apt)
-        cy.get('.mat-flat-button').dblclick({ multiple: true });
+        cy.get('#mat-input-7').type(this.data.apt);
+       // cy.get('div.input-div > button').dblclick({ multiple: true });
+       for(let n = 0; n < 2; n ++){
+        cy.get('.mat-flat-button')
+          .click()
+      }
     });
     it("thirdPage", function () {
         

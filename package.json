@@ -13,5 +13,6 @@
     "cypress": "^9.0.0",
     "cypress-mochawesome-reporter": "^2.3.0",
     "mochawesome": "^7.0.1"
-  }
+  },
+  "dependencies": {}
 }
