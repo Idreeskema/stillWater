@@ -22,17 +22,14 @@ describe("Test Still Water", () => {
        
 
     })
-    
-        
-    
-    it("Assert on First Page", function () {
+    it("Assert Data that  should be visible", function () {
 
-        cy.get('#avatar-lily').should('be.visible');
-        cy.get('.lily-voice').should('be.visible', this.data.firstPageData);
+        cy.get('#avatar-lily').should('be.visible');// Picture should be visible
+        cy.get('.lily-voice').should('be.visible', this.data.firstPageData);// quote should be visible
     });
     it("userInput", function () {
-        cy.get('#mat-input-0').type(this.data.firstName);
-        cy.get('#mat-input-1').type(this.data.lastName);
+        cy.get('#mat-input-0').type(this.data.firstName);//Entering UserName
+        cy.get('#mat-input-1').type(this.data.lastName);//Entering LastName
         cy.get('#mat-input-2').type(this.data.newDate);
         cy.get('.mat-flat-button').click();
     });
