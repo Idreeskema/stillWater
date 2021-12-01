@@ -2,7 +2,7 @@
 
 
 
-describe("Test Still Water", () => {
+describe("Test Still Water Annual", () => {
     afterEach(function() {
         if (this.currentTest.state === 'failed') {
           Cypress.runner.stop()

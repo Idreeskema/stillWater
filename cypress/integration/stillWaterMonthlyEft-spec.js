@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Test Still Water", () => {
+describe("Test Still Water MonthlyEft", () => {
     afterEach(function() {
         if (this.currentTest.state === 'failed') {
           Cypress.runner.stop()
