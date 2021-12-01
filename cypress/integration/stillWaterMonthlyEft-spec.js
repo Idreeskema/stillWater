@@ -28,7 +28,7 @@ describe("Test Still Water", () => {
         //Entering UserName
         cy.get('#mat-input-1').type(this.data.lastName);
         //Entering LastName
-        cy.get('#mat-input-2').type(this.data.newDate);
+        cy.get('#mat-input-2').type(this.data.DateofBirth);
         //Entering DateOfBirth
         cy.get('.mat-flat-button').click();
         //Clicking On Next Button
