@@ -42,7 +42,7 @@ describe("Test Still Water", () => {
         cy.get('.pac-item').click();
         //Clicked On fetched Address
         cy.get('#mat-input-7').type(this.data.apt);
-       for(let n = 0; n < 2; n ++){
+       for(let n = 0; n < 3; n ++){
         cy.get('.mat-flat-button')
           .click()
       }
