@@ -5,15 +5,17 @@
     "screenshotOnRunFailure": true,
     
 
-    "reporter": "mochawesome",
+    
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-      "reportDir": "cypress/reports",
-      "reportFilename": "report",
-      "overwrite": true,
-      "html": true,
-      "json": false,
-      "charts": false,
-      "embeddedScreenshots": true
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
     },
     "video": false
    
